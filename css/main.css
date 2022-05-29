@@ -1,0 +1,248 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-family: "Sen", sans-serif;
+}
+
+/* navBar */
+nav {
+  width: 100%;
+  height: 50px;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  z-index: 1111111;
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding: 0 50px;
+  height: 100%;
+  font-family: "Sen", sans-serif;
+}
+.logo {
+  flex: 1;
+}
+.logo h1 {
+  font-size: 30px;
+  color: #e50914;
+}
+.menu {
+  flex: 6;
+}
+.menu-list {
+  display: flex;
+  list-style: none;
+}
+.menu-list li {
+  margin: 0 20px;
+}
+.menu-list .active {
+  font-weight: bold;
+}
+.account {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.account span {
+  margin: 0 10px;
+}
+.acount-image {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+}
+.mode {
+  width: 40px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 30px;
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+.mode-icon {
+  color: goldenrod;
+}
+.mode-ball {
+  width: 18px;
+  height: 18px;
+  background-color: #000;
+  position: absolute;
+  right: 1px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+}
+/* sideBar */
+
+.sidebar {
+  width: 50px;
+  height: 100%;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+.sidebar-icon {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+/* container */
+.container {
+  background-color: #151515;
+  min-height: calc(90vh - 50px);
+  color: white;
+}
+.container-content {
+  margin-left: 50px;
+}
+.featured-content {
+  height: 40vh;
+  padding: 50px;
+}
+
+.featured-content img {
+  width: 200px;
+}
+
+.featured-desc {
+  width: 500px;
+  color: lightgray;
+  margin: 30px 0;
+}
+
+.featured-btn {
+  background-color: #4dbf00;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* .movie-list-container */
+.movie-list-container {
+  padding: 30px 15px;
+}
+.movie-list-item-img {
+  transition: all 1s ease-in-out;
+  width: 270px;
+  height: 200px;
+  border-radius: 20px;
+}
+.movie-list {
+  display: flex;
+  align-items: center;
+  height: 300px;
+  transition: all 1s ease-in-out;
+}
+.movie-list-item {
+  margin-right: 30px;
+  position: relative;
+}
+.movie-list-item:hover .movie-list-item-img {
+  transform: scale(1.1);
+  padding: 10px 20px 10px 0;
+  opacity: 0.4;
+}
+
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button {
+  opacity: 1;
+}
+.movie-list-item-title {
+  background-color: rgba(3, 3, 3, 0.348);
+  padding: 0 10px;
+  font-size: 32px;
+  font-weight: bold;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+.movie-list-item-desc {
+  background-color: rgba(3, 3, 3, 0.348);
+  padding: 10px;
+  font-size: 14px;
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+.movie-list-item-button {
+  padding: 10px;
+  background-color: #4dbf00;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 82%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+
+/*DarkMOde  */
+.container.active {
+  background-color: white;
+  transition: 1s ease-in-out;
+}
+
+.movie-list-title.active {
+  color: black;
+  transition: 1s ease-in-out;
+}
+
+.navbar-container.active {
+  background-color: white;
+  color: black;
+  transition: 1s ease-in-out;
+}
+
+.sidebar.active {
+  background-color: white;
+  transition: 1s ease-in-out;
+}
+
+.sidebar-icon.active {
+  color: black;
+  transition: 1s ease-in-out;
+}
+
+.mode.active {
+  background-color: black;
+  transition: 1s ease-in-out;
+}
+
+.mode-ball.active {
+  background-color: white;
+  transform: translateX(-20px);
+  transition: 1s ease-in-out;
+}
+
+@media only screen and (max-width: 900px) {
+  .menu {
+    display: none;
+  }
+}
